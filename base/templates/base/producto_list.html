@@ -1,0 +1,19 @@
+<h1>Lista de Productos</h1>
+
+<table>
+    <tr>
+        <th>Productos</th><br>
+    </tr>
+
+    {% for Producto in object_list %}
+
+    <tr>
+        <td>{{Producto.nombre}}</td>
+        <td><a href="{% url 'Productodetalle' Producto.id %}">Ver</a></td>
+    </tr>
+
+
+
+
+    {% endfor %}
+</table>
