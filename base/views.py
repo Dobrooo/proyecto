@@ -23,8 +23,8 @@ class ProductosView(LoginRequiredMixin, ListView):
     model = Producto
     context_object_name = 'productos'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+    def get_context_data(self, **kwarg):
+        context = super().get_context_data(**kwarg)
         context['productos'] = context['productos'].filter(usuario=self.request.user)
         return context
 
