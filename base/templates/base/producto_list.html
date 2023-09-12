@@ -1,3 +1,15 @@
+{% if request.user.is_authenticated %}
+
+<p>{{request.user}}</p>
+    <a href="{% url 'Logout' %}">Salir</a>
+{% else %}
+
+    <a href="{% url 'Logueo' %}">Ingresar</a>
+
+{% endif %}
+<hr>
+
+
 <h1>Lista de Productos</h1>
 <h2><a href="{% url 'AgrProducto' %}">Agregar Producto</a></h2>
 
