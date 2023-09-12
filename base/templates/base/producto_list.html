@@ -1,4 +1,6 @@
 <h1>Lista de Productos</h1>
+<h2><a href="{% url 'AgrProducto' %}">Agregar Producto</a></h2>
+
 
 <table>
     <tr>
@@ -10,6 +12,8 @@
     <tr>
         <td>{{Producto.nombre}}</td>
         <td><a href="{% url 'Productodetalle' Producto.id %}">Ver</a></td>
+        <td><a href="{% url 'Modproducto' Producto.id %}">Editar</a></td>
+        <td><a href="{% url 'ElimProducto' Producto.id %}">Eliminar</a></td>
     </tr>
 
 
