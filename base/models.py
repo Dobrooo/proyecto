@@ -8,7 +8,7 @@ class Producto(models.Model):
     stock_minimo = models.IntegerField(blank=True, null=True)
     codigo_de_barras = models.IntegerField(blank=True, null=True)
     precio = models.IntegerField(blank=True, null=True)
-
+    
 
     def __str__(self):
         return self.nombre
